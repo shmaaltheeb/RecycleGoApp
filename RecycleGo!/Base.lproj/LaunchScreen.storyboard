@@ -24,11 +24,11 @@
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="8" height="11"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7Y-FP-BBX">
-                                <rect key="frame" x="175" y="356" width="43" height="58"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7Y-FP-BBX">
+                                <rect key="frame" x="106" y="363" width="201" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="44"/>
-                                <color key="textColor" systemColor="systemGray6Color"/>
+                                <color key="textColor" red="0.40808324752690706" green="0.65126919908588432" blue="0.49371165496062763" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="8" height="11"/>
                             </label>

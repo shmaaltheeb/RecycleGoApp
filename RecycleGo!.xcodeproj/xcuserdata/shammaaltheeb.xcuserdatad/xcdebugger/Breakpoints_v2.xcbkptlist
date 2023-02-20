@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "A95BA6BF-B872-42C9-8D82-9EEC071CA3BF"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FEDF92B9-7481-42DD-8F2D-5E13EBFB70F6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RecycleGo!/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "TestAddress"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "FEDF92B9-7481-42DD-8F2D-5E13EBFB70F6 - 4b57343ab22c4296"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecycleGo_.TestAddress.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; RecycleGo_.TestAddress"
+                  moduleName = "RecycleGo!"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shammaaltheeb/Desktop/RecycleGo!/RecycleGo!/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "31">
+               </Location>
+               <Location
+                  uuid = "FEDF92B9-7481-42DD-8F2D-5E13EBFB70F6 - 95f8b1d1124620ba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecycleGo_.TestAddress.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; RecycleGo_.TestAddress"
+                  moduleName = "RecycleGo!"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shammaaltheeb/Desktop/RecycleGo!/RecycleGo!/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "347">
+               </Location>
+               <Location
+                  uuid = "FEDF92B9-7481-42DD-8F2D-5E13EBFB70F6 - 35a29f3890d7903e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecycleGo_.TestAddress.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;RecycleGo_.TestAddress&gt;"
+                  moduleName = "RecycleGo!"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shammaaltheeb/Desktop/RecycleGo!/RecycleGo!/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  uuid = "FEDF92B9-7481-42DD-8F2D-5E13EBFB70F6 - 219343101d665d60"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecycleGo_.TestAddress.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;RecycleGo_.TestAddress&gt;"
+                  moduleName = "RecycleGo!"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shammaaltheeb/Desktop/RecycleGo!/RecycleGo!/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "304">
+               </Location>
+               <Location
+                  uuid = "FEDF92B9-7481-42DD-8F2D-5E13EBFB70F6 - 558f6e4b5cb1f94d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecycleGo_.TestAddress.__deallocating_deinit"
+                  moduleName = "RecycleGo!"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shammaaltheeb/Desktop/RecycleGo!/RecycleGo!/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "71952EEC-7886-497D-81B1-8451ECD7070D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RecycleGo!/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "TestAddress"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -14,6 +14,9 @@
 		9D73D38F2995FA3E007A1CE0 /* RecycleGo_.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D73D38D2995FA3E007A1CE0 /* RecycleGo_.xcdatamodeld */; };
 		9D73D3912995FA41007A1CE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D73D3902995FA41007A1CE0 /* Assets.xcassets */; };
 		9D73D3942995FA41007A1CE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D73D3922995FA41007A1CE0 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (Recycle, recycling, ); }; };
+		9DD4352029A26C4D00C093B0 /* gif loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4351F29A26C4D00C093B0 /* gif loader.swift */; };
+		9DD4352329A271D900C093B0 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4352229A271D900C093B0 /* Product.swift */; };
+		9DD4352829A2778E00C093B0 /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4352729A2778E00C093B0 /* ProductCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		9D73D3932995FA41007A1CE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D73D3952995FA41007A1CE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D73D39C2995FEEE007A1CE0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		9DD4351F29A26C4D00C093B0 /* gif loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "gif loader.swift"; sourceTree = "<group>"; };
+		9DD4352229A271D900C093B0 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		9DD4352729A2778E00C093B0 /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,10 @@
 		9D73D3832995FA3E007A1CE0 /* RecycleGo! */ = {
 			isa = PBXGroup;
 			children = (
+				9DD4352929A2A53900C093B0 /* Views */,
+				9DD4352429A2763600C093B0 /* Components */,
+				9DD4352129A271A000C093B0 /* Recyclables */,
+				9DD4351F29A26C4D00C093B0 /* gif loader.swift */,
 				9D73D3842995FA3E007A1CE0 /* AppDelegate.swift */,
 				9D73D3862995FA3E007A1CE0 /* SceneDelegate.swift */,
 				9D73D3882995FA3E007A1CE0 /* ViewController.swift */,
@@ -69,6 +79,29 @@
 				9D73D38D2995FA3E007A1CE0 /* RecycleGo_.xcdatamodeld */,
 			);
 			path = "RecycleGo!";
+			sourceTree = "<group>";
+		};
+		9DD4352129A271A000C093B0 /* Recyclables */ = {
+			isa = PBXGroup;
+			children = (
+				9DD4352229A271D900C093B0 /* Product.swift */,
+			);
+			path = Recyclables;
+			sourceTree = "<group>";
+		};
+		9DD4352429A2763600C093B0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9DD4352729A2778E00C093B0 /* ProductCard.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		9DD4352929A2A53900C093B0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +183,9 @@
 				9D73D3852995FA3E007A1CE0 /* AppDelegate.swift in Sources */,
 				9D73D3872995FA3E007A1CE0 /* SceneDelegate.swift in Sources */,
 				9D73D38F2995FA3E007A1CE0 /* RecycleGo_.xcdatamodeld in Sources */,
+				9DD4352029A26C4D00C093B0 /* gif loader.swift in Sources */,
+				9DD4352329A271D900C093B0 /* Product.swift in Sources */,
+				9DD4352829A2778E00C093B0 /* ProductCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,8 +14,8 @@
             filePath = "RecycleGo!/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "TestAddress"
             landmarkType = "3">
             <Locations>
@@ -107,8 +107,8 @@
             filePath = "RecycleGo!/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
             landmarkName = "TestAddress"
             landmarkType = "3">
          </BreakpointContent>

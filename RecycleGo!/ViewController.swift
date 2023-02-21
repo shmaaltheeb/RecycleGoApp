@@ -8,6 +8,17 @@
 import UIKit
 import SwiftUI
 
+var glassn = 1
+var elecn = 1
+var plastn = 1
+var papern = 1
+var metalsn = 1
+var glasstotalf = 0
+var electronicstotalf = 0
+var plastictotalf = 0
+var metalstotalf = 0
+var paperstotalf = 0
+
 
 class CAddress: UIViewController{
     
@@ -76,7 +87,9 @@ extension RAddress: UIPickerViewDataSource, UIPickerViewDelegate {
 }
 
 class TestAddress: UIViewController {
-  
+
+
+    
     @IBOutlet var glassimg: UIImageView!
     @IBOutlet var blur1: UIImageView!
     
@@ -84,14 +97,14 @@ class TestAddress: UIViewController {
     @IBOutlet var blur2: UIImageView!
     @IBOutlet weak var text: UILabel!
     @IBOutlet weak var p22: UIButton!
-    var glassn = 1
+    
     @IBAction func p2(_ sender: Any){
      
         text.text = "GLASS: \(glassn)"
         glassn+=1
         
     }
-    var elecn = 1
+   
     @IBOutlet weak var electronicst: UILabel!
     @IBAction func electronicbuttonc(_ sender: Any) {
         electronicst.text = "ELECTRONICS: \(elecn)"
@@ -105,7 +118,7 @@ class TestAddress: UIViewController {
     @IBOutlet weak var metalsb: UIButton!
     
     @IBOutlet weak var metalst: UILabel!
-    var metalsn = 1
+
     @IBAction func metalsbc(_ sender: Any) {
         metalst.text = "METALS:  \(metalsn)"
         metalsn+=1
@@ -121,8 +134,7 @@ class TestAddress: UIViewController {
     @IBOutlet weak var plasticst: UILabel!
     
     @IBOutlet weak var plastb: UIButton!
-    var plastn = 1
-    var papern = 1
+
     
     @IBAction func plastbc(_ sender: Any) {
         plasticst.text = "PLASTICS: \(plastn)"
@@ -137,6 +149,12 @@ class TestAddress: UIViewController {
         papern+=1
     }
     override func viewDidLoad(){
+        glassn = 1
+        elecn = 1
+        plastn = 1
+        papern = 1
+        metalsn = 1
+        
         glassimg.layer.cornerRadius = 35
         glassimg.clipsToBounds = true
         blur1.layer.cornerRadius = 30
@@ -167,3 +185,67 @@ class TestAddress: UIViewController {
     
 }
 
+class ptaddress: UIViewController {
+   
+    @IBOutlet weak var glass: UILabel!
+    
+    @IBOutlet weak var tott: UILabel!
+    @IBOutlet weak var paperpt: UILabel!
+    @IBOutlet weak var electt: UILabel!
+    @IBOutlet weak var metaltt: UILabel!
+    @IBOutlet weak var plasticctt: UILabel!
+    var total = glassn-1+papern-1+plastn-1+elecn-1+metalsn-1
+    
+    override func viewDidLoad() {
+        if glassn==1 && papern==1 && elecn==1 && metalsn==1 && plastn==1 {
+            glass.text = "You have no items in the cart"
+            paperpt.isHidden = true
+            electt.isHidden = true
+            metaltt.isHidden = true
+            plasticctt.isHidden = true
+        }
+        if glassn<=1 {
+            glass.text = "Glass: -"
+        } else {
+            glass.text = "Glass: \(glassn-1) pieces"
+        }
+        if papern<=1 {
+            paperpt.isHidden = false
+            paperpt.text = "Paper: -"
+        } else {
+            paperpt.isHidden = false
+            paperpt.text = "Paper: \(papern-1) pieces"
+        }
+        if elecn<=1 {
+            electt.isHidden = false
+            electt.text = "Electronics: -"
+        } else {
+            electt.isHidden = false
+            electt.text = "Electronic: \(elecn-1) pieces"
+        }
+        if metalsn<=1 {
+            metaltt.isHidden = false
+            metaltt.text = "Metal: -"
+        } else {
+            metaltt.isHidden = false
+            metaltt.text = "Metal: \(metalsn-1) pieces"
+        }
+        if plastn<=1 {
+            plasticctt.isHidden = false
+            plasticctt.text = "Plastic: -"
+        } else {
+            plasticctt.isHidden = false
+            plasticctt.text = "Plastic: \(plastn-1) pieces"
+        }
+        tott.text = "Total: \(total) pieces"
+        
+    }
+}
+
+class rewardsScreen: UIViewController {
+   
+    
+    override func viewDidLoad() {
+        
+    }
+}

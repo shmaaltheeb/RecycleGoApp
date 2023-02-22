@@ -242,10 +242,94 @@ class ptaddress: UIViewController {
     }
 }
 
-class rewardsScreen: UIViewController {
+class p2taddress: UIViewController {
    
+    @IBOutlet weak var glass: UILabel!
+    
+    @IBOutlet weak var tott: UILabel!
+    @IBOutlet weak var paperpt: UILabel!
+    @IBOutlet weak var electt: UILabel!
+    @IBOutlet weak var metaltt: UILabel!
+    @IBOutlet weak var plasticctt: UILabel!
+    var total = glassn-1+papern-1+plastn-1+elecn-1+metalsn-1
     
     override func viewDidLoad() {
+        if glassn==1 && papern==1 && elecn==1 && metalsn==1 && plastn==1 {
+            glass.text = "You have no items in the cart"
+            paperpt.isHidden = true
+            electt.isHidden = true
+            metaltt.isHidden = true
+            plasticctt.isHidden = true
+        }
+        if glassn<=1 {
+            glass.text = "Glass: -"
+        } else {
+            glass.text = "Glass: \((glassn-1)*10) AED    \(glassn-1) pieces"
+        }
+        if papern<=1 {
+            paperpt.isHidden = false
+            paperpt.text = "Paper: -"
+        } else {
+            paperpt.isHidden = false
+            paperpt.text = "Paper:  \((papern-1)*10) AED    \(papern-1) pieces"
+        }
+        if elecn<=1 {
+            electt.isHidden = false
+            electt.text = "Electronics: -"
+        } else {
+            electt.isHidden = false
+            electt.text = "Electronic:  \((elecn-1)*10) AED    \(elecn-1) pieces"
+        }
+        if metalsn<=1 {
+            metaltt.isHidden = false
+            metaltt.text = "Metal: -"
+        } else {
+            metaltt.isHidden = false
+            metaltt.text = "Metal:  \((metalsn-1)*10) AED    \(metalsn-1) pieces"
+        }
+        if plastn<=1 {
+            plasticctt.isHidden = false
+            plasticctt.text = "Plastic: -"
+        } else {
+            plasticctt.isHidden = false
+            plasticctt.text = "Plastic:  \((plastn-1)*10) AED    \(plastn-1) pieces"
+        }
+        tott.text = "Total:  \(total*10) AED    \(total) pieces"
+        
+    }
+}
+var totalf = 0
+class rewardsScreen: UIViewController {
+    
+    @IBOutlet weak var imgv: UIImageView!
+    @IBOutlet weak var pts: UILabel!
+    
+    @IBOutlet weak var rwb: UILabel!
+    override func viewDidLoad() {
+        glasstotalf = glassn-1
+        electronicstotalf = elecn-1
+        plastictotalf = plastn-1
+        metalstotalf = metalsn-1
+        paperstotalf = papern-1
+        totalf = totalf+glasstotalf+electronicstotalf+plastictotalf+metalstotalf+paperstotalf
+        pts.text = "\(totalf)"
+        
+        if totalf>=100 {
+            rwb.text = "You have reached a total of 100 or more points! You can use this to redeem a free drink!"
+            imgv.image = UIImage(named: "loadi3")
+        } else if totalf>=75 {
+            rwb.text = "Close to the finish line!"
+            imgv.image = UIImage(named: "loadib2")
+        } else if totalf>=50 {
+            rwb.text = "Halfway there to a free drink!"
+            imgv.image = UIImage(named: "loadi2")
+        } else if totalf>=25 {
+            rwb.text = "Collect more points to redeem a free drink!"
+            imgv.image = UIImage(named: "loadib1")
+        } else {
+            rwb.text = "Collect points to redeem a free drink!"
+            imgv.image = UIImage(named: "loadi1")
+        }
         
     }
 }

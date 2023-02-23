@@ -351,7 +351,7 @@ class aiscreen: UIViewController {
             let output = try model.prediction(input: input)
             let text = output.classLabel
             
-            //test
+            //test2
         } catch {
             print(error.localizedDescription)
         }

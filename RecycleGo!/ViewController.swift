@@ -4,7 +4,7 @@
 //
 //  Created by Shamma Alkaabi on 10/02/2023.
 //
-
+import CoreML
 import UIKit
 import SwiftUI
 
@@ -331,5 +331,29 @@ class rewardsScreen: UIViewController {
             imgv.image = UIImage(named: "loadi1")
         }
         
+    }
+}
+
+
+let config = MLModelConfiguration()
+class aiscreen: UIViewController {
+    @IBOutlet weak var aiim: UIImageView!
+    
+    override func viewDidLoad() {
+        
+    }
+    private func analyzeImage(image: UIImage?){
+        guard let buffer = image?.resize(size: CGSize(width: 224, height: 224))?.getCVPixelBuffer() else {return}
+        do {
+            let config = MLModelConfiguration()
+            let model = try RecyclablesAI_Model(configuration: config)
+            let input = RecyclablesAI_ModelInput(image: buffer)
+            let output = try model.prediction(input: input)
+            let text = output.classLabel
+            
+            
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 }

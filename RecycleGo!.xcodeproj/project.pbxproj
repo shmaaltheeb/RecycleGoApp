@@ -17,6 +17,8 @@
 		9DD4352029A26C4D00C093B0 /* gif loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4351F29A26C4D00C093B0 /* gif loader.swift */; };
 		9DD4352329A271D900C093B0 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4352229A271D900C093B0 /* Product.swift */; };
 		9DD4352829A2778E00C093B0 /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4352729A2778E00C093B0 /* ProductCard.swift */; };
+		9DE70CC029A6A7D7004E0267 /* RecyclablesAI Model.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9DE70CBF29A6A7D7004E0267 /* RecyclablesAI Model.mlmodel */; };
+		9DE70CC229A6AD8F004E0267 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE70CC129A6AD8F004E0267 /* extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		9DD4351F29A26C4D00C093B0 /* gif loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "gif loader.swift"; sourceTree = "<group>"; };
 		9DD4352229A271D900C093B0 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		9DD4352729A2778E00C093B0 /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
+		9DE70CBF29A6A7D7004E0267 /* RecyclablesAI Model.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = "RecyclablesAI Model.mlmodel"; path = "../../../../../var/folders/d3/2rc9581n7t31qctsmk1dkv400000gn/T/com.apple.dt.CreateML.app/sharing/drag/31CA3893-1120-4D97-98B1-ACF156720AAF/RecyclablesAI Model.mlmodel"; sourceTree = "<group>"; };
+		9DE70CC129A6AD8F004E0267 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,12 +75,14 @@
 				9DD4351F29A26C4D00C093B0 /* gif loader.swift */,
 				9D73D3842995FA3E007A1CE0 /* AppDelegate.swift */,
 				9D73D3862995FA3E007A1CE0 /* SceneDelegate.swift */,
+				9DE70CC129A6AD8F004E0267 /* extensions.swift */,
 				9D73D3882995FA3E007A1CE0 /* ViewController.swift */,
 				9D73D38A2995FA3E007A1CE0 /* Main.storyboard */,
 				9D73D3902995FA41007A1CE0 /* Assets.xcassets */,
 				9D73D3922995FA41007A1CE0 /* LaunchScreen.storyboard */,
 				9D73D3952995FA41007A1CE0 /* Info.plist */,
 				9D73D38D2995FA3E007A1CE0 /* RecycleGo_.xcdatamodeld */,
+				9DE70CBF29A6A7D7004E0267 /* RecyclablesAI Model.mlmodel */,
 			);
 			path = "RecycleGo!";
 			sourceTree = "<group>";
@@ -184,8 +190,10 @@
 				9D73D3872995FA3E007A1CE0 /* SceneDelegate.swift in Sources */,
 				9D73D38F2995FA3E007A1CE0 /* RecycleGo_.xcdatamodeld in Sources */,
 				9DD4352029A26C4D00C093B0 /* gif loader.swift in Sources */,
+				9DE70CC229A6AD8F004E0267 /* extensions.swift in Sources */,
 				9DD4352329A271D900C093B0 /* Product.swift in Sources */,
 				9DD4352829A2778E00C093B0 /* ProductCard.swift in Sources */,
+				9DE70CC029A6A7D7004E0267 /* RecyclablesAI Model.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -336,10 +336,36 @@ class rewardsScreen: UIViewController {
 
 
 let config = MLModelConfiguration()
-class aiscreen: UIViewController {
-    @IBOutlet weak var aiim: UIImageView!
+class aiscreen: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    private let aiim: UIImageView = {
+        let aiim = UIImageView()
+        aiim.contentMode = .scaleAspectFit
+        return aiim
+    }()
+    @IBOutlet weak var label: UILabel!
     
+ 
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        aiim.frame = CGRect(x: 20, y: view.safeAreaInsets.top, width: view.frame.size.width-40, height: view.frame.size.width-40)
+        label.frame = CGRect(x: 20, y: view.safeAreaInsets.top+(view.frame.size.width-40)+10, width: view.frame.size.width-40, height: 100)
+    }
     override func viewDidLoad() {
+        view.addSubview(aiim)
+        aiim.image = UIImage(systemName: "photo")
+        label.text = "Select Image"
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(didTapImage))
+        aiim.isUserInteractionEnabled = true
+        tap.numberOfTapsRequired = 1
+        aiim.addGestureRecognizer(tap)
+    }
+    @objc func didTapImage(){
+        let picker = UIImagePickerController()
+        picker.sourceType = .photoLibrary
+        picker.delegate = self
+        present(picker, animated: true)
         
     }
     private func analyzeImage(image: UIImage?){
@@ -350,10 +376,21 @@ class aiscreen: UIViewController {
             let input = RecyclablesAI_ModelInput(image: buffer)
             let output = try model.prediction(input: input)
             let text = output.classLabel
-            
-            //test2
+            label.text = text
         } catch {
             print(error.localizedDescription)
         }
+    }
+    //Image Picker
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        //cancelled
+        picker.dismiss(animated: true, completion: nil)
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
+            return
+        }
+        aiim.image = image
+        analyzeImage(image: image)
     }
 }

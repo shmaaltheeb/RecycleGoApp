@@ -25,6 +25,7 @@ var CityAddP = ""
 var StreetAddP = ""
 var CompantAddP = ""
 var CompanyName = ""
+var ProductUsageV = ""
 
 class CAddress: UIViewController{
     
@@ -439,7 +440,8 @@ class deliverScreenC: UIViewController {
 
 class deliverScreenR: UIViewController {
     
-    @IBOutlet weak var DeliveryAdd: UILabel!
+    @IBOutlet var Refresh: UIButton!
+    @IBOutlet var DeliveryAdd: UILabel!
     override func viewDidLoad() {
         if StreetAddP=="" {
             DeliveryAdd.text = "Address not found (for demo purposes we will move on)"
@@ -451,5 +453,24 @@ class deliverScreenR: UIViewController {
 }
 
 class delivered1: UIViewController {
+   
+    @IBOutlet var Refresh1: UIButton!
+    @IBOutlet weak var ProductUsage: UITextField!
     
+    @IBAction func RefreshClicked1(_ sender: Any) {
+        ProductUsageV = ProductUsage.text!
+    }
+    override func viewDidLoad() {
+        
+    }
+}
+
+class delivered2: UIViewController{
+    @IBOutlet var Label1: UILabel!
+    
+    @IBOutlet var Label2: UILabel!
+    override func viewDidLoad() {
+        Label1.text = "Your items have reached \(CompanyName)"
+        Label2.text = "As you have stated your products will be used for \(ProductUsageV)"
+    }
 }

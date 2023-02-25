@@ -18,12 +18,29 @@ var electronicstotalf = 0
 var plastictotalf = 0
 var metalstotalf = 0
 var paperstotalf = 0
-
+var CityAddC = ""
+var StreetAddC = ""
+var VillaAddC = ""
+var CityAddP = ""
+var StreetAddP = ""
+var CompantAddP = ""
+var CompanyName = ""
 
 class CAddress: UIViewController{
     
-    @IBOutlet var picker1: UIPickerView!
+    @IBOutlet weak var StreetC: UITextField!
+    @IBOutlet weak var VillaC: UITextField!
     
+    @IBOutlet weak var CityC: UITextField!
+
+    @IBOutlet var nextB: UIButton!
+    @IBOutlet var picker1: UIPickerView!
+
+    @IBAction func next(_ sender: Any) {
+        CityAddC = CityC.text!
+        StreetAddC = StreetC.text!
+        VillaAddC = VillaC.text!
+    }
     let emirates = ["Abu Dhabi","Dubai","Sharjah", "Um AlQuwain","Ras AlKhaimah","Fujairah","Ajman"]
     
     override func viewDidLoad() {
@@ -60,8 +77,19 @@ class ViewController: UIViewController{
 
 class RAddress: UIViewController{
     
+    @IBOutlet var StreetR: UITextField!
     @IBOutlet var picker1: UIPickerView!
+    @IBOutlet var CompanyNameB: UITextField!
+    @IBOutlet var CityB: UITextField!
+    @IBOutlet var CompanyBuildingB: UITextField!
     
+    @IBOutlet var nextRr: UIButton!
+    @IBAction func nextClicked(_ sender: Any) {
+        CityAddP = CityB.text!
+        StreetAddP = StreetR.text!
+        CompantAddP = CompanyBuildingB.text!
+        CompanyName = CompanyNameB.text!
+    }
     let emirates = ["Abu Dhabi","Dubai","Sharjah", "Um AlQuwain","Ras AlKhaimah","Fujairah","Ajman"]
     
     override func viewDidLoad() {
@@ -264,37 +292,37 @@ class p2taddress: UIViewController {
         if glassn<=1 {
             glass.text = "Glass: -"
         } else {
-            glass.text = "Glass: \((glassn-1)*10) AED    \(glassn-1) pieces"
+            glass.text = "Glass: \((glassn-1)*10) AED    \(glassn-1) kgs"
         }
         if papern<=1 {
             paperpt.isHidden = false
             paperpt.text = "Paper: -"
         } else {
             paperpt.isHidden = false
-            paperpt.text = "Paper:  \((papern-1)*10) AED    \(papern-1) pieces"
+            paperpt.text = "Paper:  \((papern-1)*10) AED    \(papern-1) kgs"
         }
         if elecn<=1 {
             electt.isHidden = false
             electt.text = "Electronics: -"
         } else {
             electt.isHidden = false
-            electt.text = "Electronic:  \((elecn-1)*10) AED    \(elecn-1) pieces"
+            electt.text = "Electronic:  \((elecn-1)*10) AED    \(elecn-1) kgs"
         }
         if metalsn<=1 {
             metaltt.isHidden = false
             metaltt.text = "Metal: -"
         } else {
             metaltt.isHidden = false
-            metaltt.text = "Metal:  \((metalsn-1)*10) AED    \(metalsn-1) pieces"
+            metaltt.text = "Metal:  \((metalsn-1)*10) AED    \(metalsn-1) kgs"
         }
         if plastn<=1 {
             plasticctt.isHidden = false
             plasticctt.text = "Plastic: -"
         } else {
             plasticctt.isHidden = false
-            plasticctt.text = "Plastic:  \((plastn-1)*10) AED    \(plastn-1) pieces"
+            plasticctt.text = "Plastic:  \((plastn-1)*10) AED    \(plastn-1) kgs"
         }
-        tott.text = "Total:  \(total*10) AED    \(total) pieces"
+        tott.text = "Total:  \(total*10) AED    \(total) kgs"
         
     }
 }
@@ -393,4 +421,35 @@ class aiscreen: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         aiim.image = image
         analyzeImage(image: image)
     }
+}
+
+class deliverScreenC: UIViewController {
+    
+    @IBOutlet var refresh: UIButton!
+    @IBOutlet weak var DeliveryAddress: UILabel!
+    override func viewDidLoad() {
+        if StreetAddC=="" {
+            DeliveryAddress.text = "Address not found (for demo purposes we will move on)"
+        } else {
+            DeliveryAddress.text = "To: \(StreetAddC), \(VillaAddC), \(CityAddC)"
+        }
+        
+    }
+}
+
+class deliverScreenR: UIViewController {
+    
+    @IBOutlet weak var DeliveryAdd: UILabel!
+    override func viewDidLoad() {
+        if StreetAddP=="" {
+            DeliveryAdd.text = "Address not found (for demo purposes we will move on)"
+        } else {
+            DeliveryAdd.text = "To: \(StreetAddP), \(CompantAddP), \(CityAddP). Thank you \(CompanyName) for your purchase"
+        }
+        
+    }
+}
+
+class delivered1: UIViewController {
+    
 }

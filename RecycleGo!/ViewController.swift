@@ -26,6 +26,7 @@ var StreetAddP = ""
 var CompantAddP = ""
 var CompanyName = ""
 var ProductUsageV = ""
+var CustomerName = ""
 
 class CAddress: UIViewController{
     
@@ -43,11 +44,23 @@ class CAddress: UIViewController{
         VillaAddC = VillaC.text!
     }
     let emirates = ["Abu Dhabi","Dubai","Sharjah", "Um AlQuwain","Ras AlKhaimah","Fujairah","Ajman"]
+    @objc func dismissKeyboard() {
+        if StreetC.isFirstResponder {
+            StreetC.resignFirstResponder()
+        } else if VillaC.isFirstResponder {
+            VillaC.resignFirstResponder()
+        } else if CityC.isFirstResponder {
+            CityC.resignFirstResponder()
+        }
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         picker1.dataSource = self
         picker1.delegate = self
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+            view.addGestureRecognizer(tapGesture)
         
     }
 }
@@ -93,11 +106,24 @@ class RAddress: UIViewController{
     }
     let emirates = ["Abu Dhabi","Dubai","Sharjah", "Um AlQuwain","Ras AlKhaimah","Fujairah","Ajman"]
     
+    @objc func dismissKeyboard() {
+        if StreetR.isFirstResponder {
+            StreetR.resignFirstResponder()
+        } else if CompanyBuildingB.isFirstResponder {
+            CompanyBuildingB.resignFirstResponder()
+        } else if CompanyNameB.isFirstResponder {
+            CompanyNameB.resignFirstResponder()
+        } else if CityB.isFirstResponder {
+            CityB.resignFirstResponder()
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         picker1.dataSource = self
         picker1.delegate = self
-        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+            view.addGestureRecognizer(tapGesture)
     }
 }
 extension RAddress: UIPickerViewDataSource, UIPickerViewDelegate {
@@ -164,7 +190,9 @@ class TestAddress: UIViewController {
     
     @IBOutlet weak var plastb: UIButton!
 
+    @IBOutlet weak var Aiimg: UIImageView!
     
+    @IBOutlet weak var blur6: UIImageView!
     @IBAction func plastbc(_ sender: Any) {
         plasticst.text = "PLASTICS: \(plastn)"
         plastn+=1
@@ -204,9 +232,10 @@ class TestAddress: UIViewController {
         blur5.clipsToBounds = true
         plasticimg.layer.cornerRadius = 35
         plasticimg.clipsToBounds = true
-
-
-        
+        blur6.layer.cornerRadius = 30
+        blur6.clipsToBounds = true
+        Aiimg.layer.cornerRadius = 35
+        Aiimg.clipsToBounds = true
         
         
     }
@@ -333,8 +362,35 @@ class rewardsScreen: UIViewController {
     @IBOutlet weak var imgv: UIImageView!
     @IBOutlet weak var pts: UILabel!
     
+    @IBOutlet weak var maitext: UILabel!
+    @IBAction func maibuttonclicked(_ sender: Any) {
+        maitext.text = "Redeemed"
+        totalf = totalf - 100
+        maibutton.isHidden = true
+    }
+    @IBOutlet weak var maibutton: UIButton!
+    @IBOutlet weak var laptopButton: UIButton!
+
+    @IBAction func LpatopButtonClicked(_ sender: Any) {
+        laptoptext.text = "Redeemed"
+        totalf = totalf - 100
+        laptopButton.isHidden = true
+    }
+    @IBOutlet weak var laptoptext: UILabel!
+    @IBOutlet weak var Username: UILabel!
     @IBOutlet weak var rwb: UILabel!
+   
+    @IBOutlet weak var laptopimg: UIImageView!
+    @IBOutlet weak var maiimg: UIImageView!
     override func viewDidLoad() {
+        maiimg.layer.cornerRadius = 35
+        maiimg.clipsToBounds = true
+        laptopimg.layer.cornerRadius = 35
+        laptopimg.clipsToBounds = true
+        Username.text = CustomerName
+        if CustomerName=="" {
+            Username.text = "Shamma"
+        }
         glasstotalf = glassn-1
         electronicstotalf = elecn-1
         plastictotalf = plastn-1
@@ -342,10 +398,15 @@ class rewardsScreen: UIViewController {
         paperstotalf = papern-1
         totalf = totalf+glasstotalf+electronicstotalf+plastictotalf+metalstotalf+paperstotalf
         pts.text = "\(totalf)"
-        
+        laptopButton.isHidden = true
+        maibutton.isHidden = true
+        if totalf>=15{
+            maibutton.isHidden = false
+        }
         if totalf>=100 {
             rwb.text = "You have reached a total of 100 or more points! You can use this to redeem a free drink!"
             imgv.image = UIImage(named: "loadi3")
+            laptopButton.isHidden = false
         } else if totalf>=75 {
             rwb.text = "Close to the finish line!"
             imgv.image = UIImage(named: "loadib2")
@@ -460,8 +521,13 @@ class delivered1: UIViewController {
     @IBAction func RefreshClicked1(_ sender: Any) {
         ProductUsageV = ProductUsage.text!
     }
+    @objc func dismissKeyboard() {
+        ProductUsage.resignFirstResponder()
+    }
+
     override func viewDidLoad() {
-        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+           view.addGestureRecognizer(tapGesture)
     }
 }
 
@@ -472,5 +538,77 @@ class delivered2: UIViewController{
     override func viewDidLoad() {
         Label1.text = "Your items have reached \(CompanyName)"
         Label2.text = "As you have stated your products will be used for \(ProductUsageV)"
+    }
+}
+
+class servicesScreen: UIViewController {
+    
+    @IBOutlet var LogInUser: UITextField!
+    @IBOutlet var LogIn: UILabel!
+    @IBOutlet var LogInButton: UIButton!
+    @IBOutlet var pleaseenter: UILabel!
+    @IBOutlet var b3: UIButton!
+    @IBOutlet var i2: UIImageView!
+    @IBOutlet var b2: UIButton!
+    @IBOutlet var l4: UILabel!
+    @IBOutlet var l3: UILabel!
+    @IBOutlet var i1: UIImageView!
+    @IBOutlet var b1: UIButton!
+    @IBOutlet var l2: UILabel!
+    @IBOutlet var label1: UILabel!
+    
+    @IBAction func LogInButtonClicked(_ sender: Any) {
+        CustomerName = LogInUser.text!
+        label1.isHidden = false
+        l2.isHidden = false
+        l3.isHidden = false
+        l4.isHidden = false
+        b1.isHidden = false
+        b2.isHidden = false
+        b3.isHidden = false
+        i1.isHidden = false
+        i2.isHidden = false
+        pleaseenter.isHidden = true
+        LogIn.isHidden = true
+        LogInButton.isHidden = true
+        LogInUser.isHidden = true
+    }
+    @objc func dismissKeyboard() {
+        LogInUser.resignFirstResponder()
+    }
+
+    override func viewDidLoad() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+            view.addGestureRecognizer(tapGesture)
+        
+        if CustomerName=="" {
+            label1.isHidden = true
+            l2.isHidden = true
+            l3.isHidden = true
+            l4.isHidden = true
+            b1.isHidden = true
+            b2.isHidden = true
+            b3.isHidden = true
+            i1.isHidden = true
+            i2.isHidden = true
+            pleaseenter.isHidden = false
+            LogIn.isHidden = false
+            LogInButton.isHidden = false
+            LogInUser.isHidden = false
+        } else {
+            label1.isHidden = false
+            l2.isHidden = false
+            l3.isHidden = false
+            l4.isHidden = false
+            b1.isHidden = false
+            b2.isHidden = false
+            b3.isHidden = false
+            i1.isHidden = false
+            i2.isHidden = false
+            pleaseenter.isHidden = true
+            LogIn.isHidden = true
+            LogInButton.isHidden = true
+            LogInUser.isHidden = true
+        }
     }
 }

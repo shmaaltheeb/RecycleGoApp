@@ -365,7 +365,7 @@ class rewardsScreen: UIViewController {
     @IBOutlet weak var maitext: UILabel!
     @IBAction func maibuttonclicked(_ sender: Any) {
         maitext.text = "Redeemed"
-        totalf = totalf - 100
+        totalf = totalf - 15
         maibutton.isHidden = true
     }
     @IBOutlet weak var maibutton: UIButton!

@@ -462,8 +462,8 @@ class aiscreen: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         guard let buffer = image?.resize(size: CGSize(width: 224, height: 224))?.getCVPixelBuffer() else {return}
         do {
             let config = MLModelConfiguration()
-            let model = try RecyclablesAI_Model(configuration: config)
-            let input = RecyclablesAI_ModelInput(image: buffer)
+            let model = try RecyclablesAI_1(configuration: config)
+            let input = RecyclablesAI_1Input(image: buffer)
             let output = try model.prediction(input: input)
             let text = output.classLabel
             label.text = text

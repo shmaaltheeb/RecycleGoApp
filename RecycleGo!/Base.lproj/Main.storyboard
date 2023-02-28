@@ -1093,16 +1093,51 @@
                                     <segue destination="RKM-pb-orC" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="k6e-vO-GST"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whitebg" translatesAutoresizingMaskIntoConstraints="NO" id="xPR-G7-xI4">
+                                <rect key="frame" x="217" y="466" width="145" height="198"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background-blur-clipart-2" translatesAutoresizingMaskIntoConstraints="NO" id="fuc-eh-jvC">
+                                <rect key="frame" x="217" y="588" width="145" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Need Help From AI?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kT-CQ-Dhw">
+                                <rect key="frame" x="227" y="592" width="121" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEc-cg-sFu">
+                                <rect key="frame" x="231" y="485" width="119" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.65938681359999995" green="0.88048243520000002" blue="0.73723697659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                                    <imageReference key="image" image="questionmark.app.fill" catalog="system" symbolScale="large"/>
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                    <color key="baseForegroundColor" red="0.15446842760000001" green="0.20626122059999999" blue="0.17288956320000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="FpD-85-VaX" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="IW3-CS-s8h"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dug-8p-Ijz"/>
                         <color key="backgroundColor" red="0.65938681359999995" green="0.88048243520000002" blue="0.73723697659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
+                        <outlet property="Aiimg" destination="xPR-G7-xI4" id="ar3-qj-3Wa"/>
                         <outlet property="blur1" destination="Y2x-FO-7Xz" id="jty-oX-H6I"/>
                         <outlet property="blur2" destination="HMP-a8-QPc" id="SHl-ad-5Wz"/>
                         <outlet property="blur3" destination="0Wa-uo-zW1" id="X65-Ba-ezg"/>
                         <outlet property="blur4" destination="rAO-a8-fz9" id="KA9-qU-eiN"/>
                         <outlet property="blur5" destination="5vi-jT-y1x" id="D2d-3B-LjG"/>
+                        <outlet property="blur6" destination="fuc-eh-jvC" id="NYV-LK-7kf"/>
                         <outlet property="electronicsimg" destination="lvE-QD-Mqy" id="0nR-z5-TwC"/>
                         <outlet property="electronicst" destination="GKr-Z7-ZAI" id="baa-sK-wg0"/>
                         <outlet property="glassimg" destination="4UB-rM-ihd" id="gIx-GI-WIn"/>
@@ -1874,12 +1909,59 @@
             </objects>
             <point key="canvasLocation" x="6768.7022900763359" y="1028.8732394366198"/>
         </scene>
+        <!--Aiscreen-->
+        <scene sceneID="LOd-H1-O6u">
+            <objects>
+                <viewController id="FpD-85-VaX" customClass="aiscreen" customModule="RecycleGo_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kXS-Ni-ZX9">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpu-3V-zgj">
+                                <rect key="frame" x="16" y="553" width="361" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="45"/>
+                                <color key="textColor" red="0.35777909819999998" green="0.4789607501" blue="0.40718550850000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Instructions: Click above and pick a photo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYX-td-T9H">
+                                <rect key="frame" x="16" y="631" width="363" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJq-Vq-O9E">
+                                <rect key="frame" x="68" y="719" width="258" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Back" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                    <color key="baseBackgroundColor" red="0.2853171283" green="0.63552960250000001" blue="0.44410728980000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="2k8-H5-ADh" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="FiL-G7-cqR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eCl-6Z-dKw"/>
+                        <color key="backgroundColor" red="0.65938681359999995" green="0.88048243520000002" blue="0.73723697659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="cpu-3V-zgj" id="PKr-sA-7qE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DZH-Tm-Ukr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3440" y="1349"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="3LF-wI-zHh"/>
         <segue reference="ZGq-75-4RW"/>
-        <segue reference="12E-kY-TpM"/>
-        <segue reference="3fi-nD-ga2"/>
-        <segue reference="c8Q-dX-TUz"/>
+        <segue reference="FiL-G7-cqR"/>
+        <segue reference="HGN-Ku-2sn"/>
+        <segue reference="ZBZ-jF-noX"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Reward" width="1024" height="1024"/>
